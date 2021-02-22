@@ -1,11 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
-function UseFetch(url) {
+function UseFetchWithId(url) {
   const cache = useRef({});
 
-  const [status, setStatus] = useState('idle');
-  const [data, setData] = useState([]);
+  const [formStatus, setStatus] = useState('idle');
+  const [formData, setData] = useState({
+    _id: '',
+
+  });
+  const [id, setId] = useState('');
 
   useEffect(() => {
     if (url.length === 0) return;
@@ -23,20 +27,20 @@ function UseFetch(url) {
         setStatus('fetched');
       }
     }
-    fetchData();
-  }, [url]);
+    if (id !== '') fetchData();
+  }, [url, id]);
   return {
-    status, data,
+    formStatus, formData, setId,
   };
 }
 
-UseFetch.defaultProps = {
+UseFetchWithId.defaultProps = {
   url: '',
 };
 
-UseFetch.propTypes = {
+UseFetchWithId.propTypes = {
   url: PropTypes.string,
   options: PropTypes.shape(PropTypes.any),
 };
 
-export default UseFetch;
+export default UseFetchWithId;

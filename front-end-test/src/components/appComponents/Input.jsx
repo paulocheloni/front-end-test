@@ -4,14 +4,16 @@ import PropTypes from 'prop-types';
 
 function Input(props) {
   const { name, label } = props;
-  const [field, setField] = useState(name);
+  const [field, setField] = useState();
   return (
     <>
       <TextField
         id={name}
         label={label}
         value={field}
-        onChange={setField}
+        onChange={(e) => setField(e.target.value)}
+        onFocus={(e) => e.target.select()}
+        variant="outlined"
       />
     </>
   );
