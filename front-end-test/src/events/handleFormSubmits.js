@@ -9,6 +9,7 @@ const handleCreateSubmit = async (setData, setUpdateTable, attributes) => {
     clientName: '',
     quantity: '',
     price: '',
+    active: false,
   });
 };
 
@@ -22,6 +23,7 @@ const handleEditSubmit = async (setEditing, setData, setUpdateTable, formData) =
     clientName: '',
     quantity: '',
     price: '',
+    active: false,
   });
 };
 

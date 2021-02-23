@@ -1,7 +1,9 @@
 import React, {
   useContext, useEffect, useState,
 } from 'react';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import { DataGrid } from '@material-ui/data-grid';
+import { Checkbox } from '@material-ui/core';
 import sharedContext from '../context/sharedcontext';
 import tableConfig from './appComponents/tableConfig';
 import './Table.css';
@@ -15,6 +17,12 @@ const renderEdit = {
   field: 'editItem',
   headerName: 'Edit item',
   width: 200,
+};
+
+const renderActive = {
+  field: 'active',
+  headerName: 'Active',
+  flex: 1,
 };
 
 export default function Table() {
@@ -53,6 +61,15 @@ export default function Table() {
                   id={params.row.id}
                 />
               </>
+            ),
+          },
+          {
+            ...renderActive,
+            renderCell: (params) => (
+              <FormControlLabel
+                checked={params.row.active}
+                control={<Checkbox />}
+              />
             ),
           },
 

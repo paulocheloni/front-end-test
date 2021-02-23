@@ -1,11 +1,13 @@
 import React, {
   useContext, useRef, useEffect, useState,
 } from 'react';
-import { Button, Grid, FormGroup } from '@material-ui/core';
+import {
+  Button, Grid, FormGroup, Checkbox, FormControlLabel,
+} from '@material-ui/core';
 import Input from './appComponents/Input';
 import sharedContext from '../context/sharedcontext';
 import cachedFetchData from '../utils/cachedFetchData';
-import handleSubmit from '../events/handleSubmits';
+import handleSubmit from '../events/handleFormSubmits';
 import url from '../methods/url';
 
 function Form() {
@@ -18,6 +20,7 @@ function Form() {
     clientName: '',
     quantity: '',
     price: '',
+    active: false,
   });
 
   useEffect(() => {
@@ -31,6 +34,18 @@ function Form() {
       <h3>{editing ? 'Editar Item' : 'Criar Item'}</h3>
       <form>
         <Grid container spacing={2}>
+          {editing && (
+            <Grid item xs={12}>
+              <Input
+                name="id"
+                label="_id"
+                value={formData.id}
+                onChange={(e) => setData({ ...formData, id: e.target.value })}
+                className="input"
+                fullWidth
+              />
+            </Grid>
+          )}
           <Grid item xs={12}>
             <Input
               name="clientName"
@@ -68,6 +83,17 @@ function Form() {
                   label="Price"
                   value={formData.price}
                   onChange={(e) => setData({ ...formData, price: e.target.value })}
+                />
+              </Grid>
+
+              <Grid item>
+
+                <FormControlLabel
+                  name="active"
+                  label="Active"
+                  control={<Checkbox />}
+                  checked={formData.active}
+                  onChange={(e) => setData({ ...formData, active: e.target.checked })}
                 />
               </Grid>
             </Grid>
