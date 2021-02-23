@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import UseFetch from '../effects/useFetch';
 import sharedContext from './sharedcontext';
-import UseFetchWithId from '../effects/useFetchWithId';
-
-const url = 'https://crudcrud.com/api/db011b2e5ee0467a90628ca91dd16c30/pedido';
 
 function Context({ children }) {
-  const { data, status } = UseFetch(url);
+  const [id, setId] = useState('');
+  const [editing, setEditing] = useState(false);
+  const [updateTable, setUpdateTable] = useState(true);
 
-  const { formData, formStatus, setId } = UseFetchWithId(url);
+  useEffect(() => {
+    if (!editing) setId('');
+  }, [editing]);
 
   return (
     <sharedContext.Provider value={{
-      data, status, formData, setId, formStatus,
+      setId, id, setEditing, editing, updateTable, setUpdateTable,
     }}
     >
       {children}

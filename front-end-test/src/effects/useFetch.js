@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import url from '../methods/url';
 
-function UseFetch(url) {
+function useFetch(shouldUpdate) {
   const cache = useRef({});
 
-  const [status, setStatus] = useState('idle');
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -12,31 +12,29 @@ function UseFetch(url) {
     async function fetchData() {
       if (cache.current[url]) {
         setData(cache.current[url]);
-        setStatus('fetched');
-      } else {
+      } else if (shouldUpdate) {
         const apiData = await fetch(url);
         const jsondata = await apiData.json();
         cache.current[url] = jsondata;
         // eslint-disable-next-line no-underscore-dangle
         const modifiedData = jsondata.map((row) => ({ ...row, id: row._id }));
         setData(modifiedData);
-        setStatus('fetched');
       }
     }
     fetchData();
-  }, [url]);
+  }, [url, shouldUpdate]);
   return {
-    status, data,
+    data,
   };
 }
 
-UseFetch.defaultProps = {
+useFetch.defaultProps = {
   url: '',
 };
 
-UseFetch.propTypes = {
+useFetch.propTypes = {
   url: PropTypes.string,
   options: PropTypes.shape(PropTypes.any),
 };
 
-export default UseFetch;
+export default useFetch;

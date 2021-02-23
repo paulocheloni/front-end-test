@@ -1,54 +1,61 @@
-import React, { useContext } from 'react';
+import React, {
+  useContext, useEffect, useState,
+} from 'react';
 import { DataGrid } from '@material-ui/data-grid';
 import sharedContext from '../context/sharedcontext';
 import tableConfig from './appComponents/tableConfig';
-import Loading from './appComponents/Loading';
 import './Table.css';
 // import editItem from '../lib/editItem';
-import deleteItem from '../lib/deleteItem';
+import deleteItem from '../methods/deleteItem';
 import SelectButton from './appComponents/SelectButton';
 import DeleteButton from './appComponents/DeleteButton';
+import cachedFetchTableData from '../utils/fetchUpdatedData';
 
-const renderSelect = {
-  field: 'renderSelect',
-  headerName: 'Select',
-  width: 100,
-};
-
-const renderDelete = {
-  field: 'renderDelete',
-  headerName: 'Delete',
-  width: 100,
-
+const renderEdit = {
+  field: 'editItem',
+  headerName: 'Edit item',
+  width: 200,
 };
 
 export default function Table() {
-  const { data, setFormData, setId } = useContext(sharedContext);
-  if (data.length === 0) return <Loading />;
+  const {
+    setId, updateTable, setUpdateTable, setEditing,
+  } = useContext(sharedContext);
+  const [tableData, setTableData] = useState([]);
+
+  // const { data } = UseFetch(updateTable);
+
+  useEffect(() => {
+    cachedFetchTableData(setTableData, updateTable);
+  }, [updateTable]);
+
+  useEffect(() => {
+    setUpdateTable(false);
+  }, [tableData]);
 
   return (
     <div className="tableContainer">
       <DataGrid
-        rows={[...data]}
+        rows={[...tableData]}
         columns={[...tableConfig,
           {
-            ...renderDelete,
+            ...renderEdit,
             renderCell: (params) => (
-              <DeleteButton
-                id={params.getValue('id')}
-                handleDelete={deleteItem}
-              />
+              <>
+                <SelectButton
+                  id={params.row.id}
+                  selectItem={setId}
+                  setEditing={setEditing}
+                />
+                <DeleteButton
+                  deleteItem={deleteItem}
+                  setShouldUpdate={setUpdateTable}
+                  id={params.row.id}
+                />
+              </>
             ),
           },
-          {
-            ...renderSelect,
-            renderCell: (params) => (
-              <SelectButton
-                id={params.getValue('id')}
-                setId={setId}
-              />
-            ),
-          },
+
         ]}
         checkBoxSelection
       />
