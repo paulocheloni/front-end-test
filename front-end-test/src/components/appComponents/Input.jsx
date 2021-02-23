@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 function Input(props) {
   const {
-    name, label, value, onChange,
+    name, label, value, onChange, fullWidth,
   } = props;
   return (
     <>
@@ -15,6 +15,8 @@ function Input(props) {
         onChange={onChange}
         onFocus={(e) => e.target.select()}
         variant="outlined"
+        fullWidth={fullWidth}
+
       />
     </>
   );
@@ -23,6 +25,7 @@ function Input(props) {
 Input.defaultProps = {
   label: 'campo',
   value: '',
+  fullWidth: false,
 };
 
 Input.propTypes = {
@@ -30,6 +33,7 @@ Input.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  fullWidth: PropTypes.bool,
 };
 
 export default Input;

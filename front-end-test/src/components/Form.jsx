@@ -1,7 +1,7 @@
 import React, {
   useContext, useRef, useEffect, useState,
 } from 'react';
-import { Button, FormGroup, Grid } from '@material-ui/core';
+import { Button, Grid, FormGroup } from '@material-ui/core';
 import Input from './appComponents/Input';
 import sharedContext from '../context/sharedcontext';
 import cachedFetchData from '../utils/cachedFetchData';
@@ -30,38 +30,53 @@ function Form() {
     <section>
       <h3>{editing ? 'Editar Item' : 'Criar Item'}</h3>
       <form>
-        <Grid container spacing={3}>
+        <Grid container spacing={2}>
           <Grid item xs={12}>
+            <Input
+              name="clientName"
+              label="Client Name"
+              value={formData.clientName}
+              onChange={(e) => setData({ ...formData, clientName: e.target.value })}
+              className="input"
+              fullWidth
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <Input
+              name="productName"
+              label="Product Name"
+              value={formData.productName}
+              onChange={(e) => setData({ ...formData, productName: e.target.value })}
+              fullWidth
+            />
+          </Grid>
+          <Grid item>
+            <Grid container spacing={2}>
+              <Grid item>
 
-            <FormGroup>
-              <Input
-                name="clientName"
-                label="Client Name"
-                value={formData.clientName}
-                onChange={(e) => setData({ ...formData, clientName: e.target.value })}
-              />
-              <Input
-                name="productName"
-                label="Product Name"
-                value={formData.productName}
-                onChange={(e) => setData({ ...formData, productName: e.target.value })}
-              />
+                <Input
+                  name="quantity"
+                  label="Quantity"
+                  value={formData.quantity}
+                  onChange={(e) => setData({ ...formData, quantity: e.target.value })}
+                />
+              </Grid>
+              <Grid item>
 
-            </FormGroup>
-            <FormGroup row>
-              <Input
-                name="quantity"
-                label="Quantity"
-                value={formData.quantity}
-                onChange={(e) => setData({ ...formData, quantity: e.target.value })}
-              />
-              <Input
-                name="price"
-                label="Price"
-                value={formData.price}
-                onChange={(e) => setData({ ...formData, price: e.target.value })}
-              />
-            </FormGroup>
+                <Input
+                  name="price"
+                  label="Price"
+                  value={formData.price}
+                  onChange={(e) => setData({ ...formData, price: e.target.value })}
+                />
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        <div className="button">
+
+          <FormGroup>
+
             <Button
               type="submit"
               color="primary"
@@ -73,8 +88,8 @@ function Form() {
               {editing ? 'Editar Item' : 'Criar Item'}
               {' '}
             </Button>
-          </Grid>
-        </Grid>
+          </FormGroup>
+        </div>
       </form>
     </section>
   );

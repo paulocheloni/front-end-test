@@ -4,11 +4,11 @@ import Table from '../components/Table';
 
 function Home() {
   return (
-    <>
-      <h2>ABM STOCK </h2>
+    <div className="pageContainer">
+      <h2 className="title">ABM STOCK </h2>
       <Table />
       <Form />
-    </>
+    </div>
   );
 }
 

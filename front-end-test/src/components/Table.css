@@ -1,3 +1,13 @@
 .tableContainer {
   height: 300px;
+  width: 100%;
 }
+
+.pageContainer {
+  margin: 10px;
+}
+
+.button {
+  margin-top: 45px;
+}
+
