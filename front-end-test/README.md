@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Objective: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 1 - create a webApp based on ABM Stock
 
-## Available Scripts
+data model: _id, quantity, price, product (object), client, active
 
-In the project directory, you can run:
+# A - create a form to edit  the registry of items in stock
 
-### `yarn start`
+  - items should be listed in a table
+  - each item should have a Select and a Delete action
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# B - Select action should acess data through a GET method by _id and data should be rendered at the forms to editing
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# 2 -  webApp should use crudcrud service as ABM interactions 
 
-### `yarn test`
+--------
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Architecture:
 
-### `yarn build`
+Regardless the fact that there is only one page, it was chosen to split the code into layers like pages, methods, events, context, components and utils.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Styling:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Material UI is used for styling due to its fancy interface =)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Biggest Challenges:
 
-### `yarn eject`
+Material UI is a great library, it provides a lot of possibilities specially to big applications, but 
+i never had worked with Datagrid, so i think it was the biggest challenge understanding its structure and potentials.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
