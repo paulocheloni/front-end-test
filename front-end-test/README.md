@@ -15,6 +15,16 @@ data model: _id, quantity, price, product (object), client, active
 
 --------
 
+# Languages
+- Javascript
+- HTML
+- CSS
+
+# Frameworks and Libraries
+
+- React 
+- Material UI
+
 # Architecture:
 
 Regardless the fact that there is only one page, it was chosen to split the code into layers like pages, methods, events, context, components and utils.
@@ -25,7 +35,7 @@ Material UI is used for styling due to its fancy interface =)
 
 # Biggest Challenges:
 
-Material UI is a great library, it provides a lot of possibilities specially to big applications, but 
+Material UI is a great Framework, it provides a lot of possibilities specially to big applications, but 
 i never had worked with Datagrid, so i think it was the biggest challenge understanding its structure and potentials.
 
 
