@@ -1,0 +1,277 @@
+repo_name: paulocheloni/front-end-test
+report_id: 6251d50f4863681aea37fb7cc7b69b35
+version: 0.1
+repo_type: Public
+timestamp: '2024-07-29T14:27:55+00:00'
+requested_by: paulocheloni
+provider: github
+branch: master
+detected_tools_count: 20
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test
+  detection_source: Repo Metadata
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/paulocheloni/front-end-test
+  detection_source: Repo Metadata
+- name: Material-UI
+  description: Material UI is a library of React UI components that implements Google's
+    Material Design.
+  website_url: https://github.com/mui/material-ui
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Front-End Frameworks
+  image_url: https://img.stackshare.io/service/1904/default_44d81cb9fadbc3688b7e91a6d5217d0ea5358b57.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-22 04:36:10.000000000 Z
+- name: React
+  description: A JavaScript library for building user interfaces
+  website_url: https://reactjs.org/
+  version: 17.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: React Router
+  description: A complete routing solution for React.js
+  website_url: https://github.com/rackt/react-router
+  version: 5.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: JavaScript Framework Components
+  image_url: https://img.stackshare.io/service/3350/8261421.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: ESLint
+  description: The fully pluggable JavaScript code quality tool
+  website_url: http://eslint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-19 10:12:02.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test
+  detection_source: Repo Metadata
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-19 10:12:02.000000000 Z
+- name: "@material-ui/core"
+  description: React components that implement Google's Material Design
+  package_url: https://www.npmjs.com/@material-ui/core
+  version: 4.11.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16271/default_f04d39fc656c2e32ee1b9d3875a3002459aa3b69.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-22 04:36:10.000000000 Z
+- name: "@testing-library/jest-dom"
+  description: Custom jest matchers to test the state of the DOM
+  package_url: https://www.npmjs.com/@testing-library/jest-dom
+  version: 5.11.9
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17424/default_1cdcda15ebb7caed879f8340bc212b44c4ec9dac.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: "@testing-library/react"
+  description: Simple and complete React DOM testing utilities that encourage good
+    testing practices
+  package_url: https://www.npmjs.com/@testing-library/react
+  version: 11.2.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16549/default_d522554c6a41cb28d922d6d3ad32ad4afa0e3bb5.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: eslint-config-airbnb
+  description: Airbnb's ESLint config, following our styleguide
+  package_url: https://www.npmjs.com/eslint-config-airbnb
+  version: 18.2.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15857/default_7c39a83d4acd952df89b1ebfdb94c8646324fbf1.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: eslint-plugin-import
+  description: Import with sanity
+  package_url: https://www.npmjs.com/eslint-plugin-import
+  version: 2.22.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15806/default_98aa227f51aa9d787815ec3fd98d0ab2bfebbb91.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: eslint-plugin-jsx-a11y
+  description: Static AST checker for accessibility rules on JSX elements
+  package_url: https://www.npmjs.com/eslint-plugin-jsx-a11y
+  version: 6.4.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15845/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: eslint-plugin-react
+  description: React specific linting rules for ESLint
+  package_url: https://www.npmjs.com/eslint-plugin-react
+  version: 7.22.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15817/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: eslint-plugin-react-hooks
+  description: ESLint rules for React Hooks
+  package_url: https://www.npmjs.com/eslint-plugin-react-hooks
+  version: 4.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16149/default_1f3a2fc7d882e29a43394ecdf491b8989ea3f0fa.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: prop-types
+  description: Runtime type checking for React props and similar objects
+  package_url: https://www.npmjs.com/prop-types
+  version: 15.7.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15843/default_b71c906aeda030a5e2f1fe40bf12a93be52404ab.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: react-dom
+  description: React package for working with the DOM
+  package_url: https://www.npmjs.com/react-dom
+  version: 17.0.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15808/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: react-router-dom
+  description: DOM bindings for React Router
+  package_url: https://www.npmjs.com/react-router-dom
+  version: 5.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16025/default_e25d1fbb04a118c79fb444294461417342bd03bf.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
+- name: react-scripts
+  description: Configuration and scripts for Create React App
+  package_url: https://www.npmjs.com/react-scripts
+  version: 4.0.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15985/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: https://github.com/paulocheloni/front-end-test/blob/master/front-end-test/package-lock.json
+  detection_source: front-end-test/package.json
+  last_updated_by: paulo
+  last_updated_on: 2021-02-20 08:20:15.000000000 Z
